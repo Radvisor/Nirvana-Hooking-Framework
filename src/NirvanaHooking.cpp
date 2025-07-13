@@ -41,11 +41,11 @@ using EnumSize_t = std::uint_least_t<sizeof(PROCESSINFOCLASS) * 8>::type;
 constexpr EnumSize_t ProcessInstrumentationCallback = 40;
 
 
-extern "C"
-{
 /*
   Our assembly function which will be the first code executed in the context of the callback.
 */
+extern "C"
+{
 #ifdef _WIN64
 	VOID LowCallbackWrapper64();
 #else
