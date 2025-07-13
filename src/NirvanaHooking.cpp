@@ -43,14 +43,14 @@ constexpr EnumSize_t ProcessInstrumentationCallback = 40;
 
 extern "C"
 {
-	/*
-	  Our assembly function which will be the first code executed in the context of the callback.
-	*/
-#	ifdef _WIN64
-		VOID LowCallbackWrapper64();
-#	else
-		VOID LowCallbackWrapper32();
-#	endif
+/*
+  Our assembly function which will be the first code executed in the context of the callback.
+*/
+#ifdef _WIN64
+	VOID LowCallbackWrapper64();
+#else
+	VOID LowCallbackWrapper32();
+#endif
 }
 
 
